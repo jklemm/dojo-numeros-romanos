@@ -1,3 +1,6 @@
+# Created by https://www.gitignore.io
+
+### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -13,6 +16,7 @@ develop-eggs/
 dist/
 downloads/
 eggs/
+.eggs/
 lib/
 lib64/
 parts/
@@ -36,9 +40,11 @@ pip-delete-this-directory.txt
 htmlcov/
 .tox/
 .coverage
+.coverage.*
 .cache
 nosetests.xml
 coverage.xml
+*,cover
 
 # Translations
 *.mo
@@ -53,49 +59,51 @@ docs/_build/
 # PyBuilder
 target/
 
-# =========================
-# Operating System Files
-# =========================
 
-# OSX
-# =========================
+### PyCharm ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
 
-.DS_Store
-.AppleDouble
-.LSOverride
+*.iml
 
-# Thumbnails
-._*
+## Directory-based project format:
+.idea/
+# if you remove the above rule, at least ignore the following:
 
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+# User-specific stuff:
+# .idea/workspace.xml
+# .idea/tasks.xml
+# .idea/dictionaries
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Sensitive or high-churn files:
+# .idea/dataSources.ids
+# .idea/dataSources.xml
+# .idea/sqlDataSources.xml
+# .idea/dynamic.xml
+# .idea/uiDesigner.xml
 
-# Windows
-# =========================
+# Gradle:
+# .idea/gradle.xml
+# .idea/libraries
 
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Mongo Explorer plugin:
+# .idea/mongoSettings.xml
 
-# Folder config file
-Desktop.ini
+## File-based project format:
+*.ipr
+*.iws
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+## Plugin-specific files:
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# IntelliJ
+/out/
 
-# Windows shortcuts
-*.lnk
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
