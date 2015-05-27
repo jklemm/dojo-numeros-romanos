@@ -35,6 +35,17 @@ CCC = 300
 MMM = 3000
 ```
 
+Do milhar 4000 em diante, os algarismos são os mesmos de unidade (IV, V, VI, VII, VIII, IX, X), porém com acento circunflexo após o algarismo:
+```
+IV^ = 4000
+V^ = 5000
+VI^ = 6000
+VII^ = 7000
+VIII^ = 8000
+IX^ = 9000
+X^ = 10000
+```
+
 Quando escritos à direita de numerais maiores, I, X e C somam-se aos valores dos primeiros:
 ```
 VIII = 5 + 1 + 1 + 1 = 8
@@ -49,8 +60,3 @@ IV = 5 - 1 = 4
 IX = 10 - 1 = 9
 XC = 100 - 10 = 90
 ```
-
-### Dica
-
-Devido à dificuldade de se escrever de **4000** em diante, que seria **IV** (com *overline* - uma linha acima do texto), 
-utilize o '^' chapéu depois do algarismo ao invés de overline.
