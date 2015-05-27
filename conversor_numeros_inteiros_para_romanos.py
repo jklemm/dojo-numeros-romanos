@@ -21,8 +21,10 @@ class ConversorDeNumerosInteirosParaRomanos(object):
         unidade = int(self.explode.pares[0][0])
         dezena = int(self.explode.pares[0][1])
         centena = int(self.explode.pares[0][2])
+        milhar = int(self.explode.pares[1][0])
 
-        retorno = self._converte_centena(centena)
+        retorno = self._converte_milhar(milhar)
+        retorno += self._converte_centena(centena)
         retorno += self._converte_dezena(dezena)
         retorno += self._converte_unidade(unidade)
         return retorno
@@ -68,3 +70,17 @@ class ConversorDeNumerosInteirosParaRomanos(object):
             return self.QUINHENTOS + self.CEM * vezes
         elif centena == 9:
             return self.CEM + self.MIL
+
+    def _converte_milhar(self, milhar):
+        if milhar == 0:
+            return ''
+        elif milhar in (1, 2, 3):
+            return self.MIL * milhar
+        elif milhar in (4, 5):
+            vezes = 5 - milhar
+            return '_' + self.UM * vezes + self.CINCO
+        elif milhar in (6, 7, 8):
+            vezes = milhar - 5
+            return '_' + self.CINCO + self.UM * vezes
+        elif milhar == 9:
+            return '_' + self.UM + self.DEZ

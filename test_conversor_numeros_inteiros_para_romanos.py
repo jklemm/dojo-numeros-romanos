@@ -41,6 +41,17 @@ class ConverteParaNumerosRomanosTests(TestCase):
         self.assertEquals('DCCC', self.conversor.converter(800))
         self.assertEquals('CM', self.conversor.converter(900))
 
+    def test_todos_os_milhares(self):
+        self.assertEquals('M', self.conversor.converter(1000))
+        self.assertEquals('MM', self.conversor.converter(2000))
+        self.assertEquals('MMM', self.conversor.converter(3000))
+        self.assertEquals('_IV', self.conversor.converter(4000))
+        self.assertEquals('_V', self.conversor.converter(5000))
+        self.assertEquals('_VI', self.conversor.converter(6000))
+        self.assertEquals('_VII', self.conversor.converter(7000))
+        self.assertEquals('_VIII', self.conversor.converter(8000))
+        self.assertEquals('_IX', self.conversor.converter(9000))
+
     def test_todos_misturados(self):
         self.assertEquals('III', self.conversor.converter(3))
         self.assertEquals('VIII', self.conversor.converter(8))
