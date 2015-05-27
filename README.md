@@ -50,4 +50,6 @@ IX = 10 - 1 = 9
 XC = 100 - 10 = 90
 ```
 
-Devido à dificuldade de se escrever de **4000** em diante, que seria **IV** (com *overline* - uma linha acima do texto), o exercício será limitado até o número inteiro **3999**.
+
+Devido à dificuldade de se escrever de **4000** em diante, que seria **IV** (com *overline* - uma linha acima do texto), 
+utilize o underline antes do algarismo ao invés de overline.
