@@ -1,18 +1,18 @@
 # dojo-numeros-romanos
-Conversor de números inteiros para romanos e vice-versa.
+Conversor de nÃºmeros inteiros para romanos e vice-versa.
 
 Dojo retirado de: http://dojopuzzles.com/problemas/exibe/numeros-romanos/
 
 ### O Problema
 
-O sistema de numeração romana (ou números romanos) desenvolveu-se na Roma Antiga e utilizou-se em todo o seu Império.
+O sistema de numeraÃ§Ã£o romana (ou nÃºmeros romanos) desenvolveu-se na Roma Antiga e utilizou-se em todo o seu ImpÃ©rio.
 
-Neste sistema as cifras escrevem-se com determinadas letras, que representam os números. As letras são sempre maiúsculas, 
-já que no alfabeto romano não existem as minúsculas, as letras são I, V, X, L, C, D e M.
+Neste sistema as cifras escrevem-se com determinadas letras, que representam os nÃºmeros. As letras sÃ£o sempre maiÃºsculas, 
+jÃ¡ que no alfabeto romano nÃ£o existem as minÃºsculas, as letras sÃ£o I, V, X, L, C, D e M.
 
-Sua tarefa é desenvolver um programa que converta números indo-arábicos para o formato romano e vice-versa.
+Sua tarefa Ã© desenvolver um programa que converta nÃºmeros indo-arÃ¡bicos para o formato romano e vice-versa.
 
-As regras para a formação dos números romanos são apresentadas a seguir.
+As regras para a formaÃ§Ã£o dos nÃºmeros romanos sÃ£o apresentadas a seguir.
 
 Cada letra corresponde a um determinado valor:
 ```
@@ -25,9 +25,9 @@ D = 500
 M = 1000
 ```
 
-Agrupando as letras acima, podemos representar os números de acordo com um conjunto de regras:
+Agrupando as letras acima, podemos representar os nÃºmeros de acordo com um conjunto de regras:
 
-Com exceção de V, L e D, os outros numerais podem se repetir no máximo três vezes:
+Com exceÃ§Ã£o de V, L e D, os outros numerais podem se repetir no mÃ¡ximo trÃªs vezes:
 ```
 III = 3
 XXX = 30
@@ -35,7 +35,7 @@ CCC = 300
 MMM = 3000
 ```
 
-Quando escritos à direita de numerais maiores, I, X e C somam-se aos valores dos primeiros:
+Quando escritos Ã  direita de numerais maiores, I, X e C somam-se aos valores dos primeiros:
 ```
 VIII = 5 + 1 + 1 + 1 = 8
 LXII = 50 + 10 + 1 + 1 = 62
@@ -43,13 +43,11 @@ CLVIII = 158
 MCXX = 1000 + 100 + 10 + 10 = 1120
 ```
 
-Mas se os numerais I, X e C estiverem à esquerda dos maiores, seus valores são subtraídos como, por exemplo, em:
+Mas se os numerais I, X e C estiverem Ã  esquerda dos maiores, seus valores sÃ£o subtraÃ­dos como, por exemplo, em:
 ```
 IV = 5 - 1 = 4
 IX = 10 - 1 = 9
 XC = 100 - 10 = 90
 ```
 
-Devido à dificuldade de se escrever de 4000 em diante, que seria ~~IV~~ (com uma linha acima), o exercício será limitado
-até o número inteiro 3999.
-
+Devido Ã  dificuldade de se escrever de **4000** em diante, que seria **IV** (com *overline* - uma linha acima do texto), o exercÃ­cio serÃ¡ limitado atÃ© o nÃºmero inteiro **3999**.
