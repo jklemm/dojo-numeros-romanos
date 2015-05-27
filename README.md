@@ -49,3 +49,7 @@ IV = 5 - 1 = 4
 IX = 10 - 1 = 9
 XC = 100 - 10 = 90
 ```
+
+Devido à dificuldade de se escrever de 4000 em diante, que seria ~~IV~~ (com uma linha acima), o exercício será limitado
+até o número inteiro 3999.
+
