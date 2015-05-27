@@ -53,4 +53,4 @@ XC = 100 - 10 = 90
 ### Dica
 
 Devido à dificuldade de se escrever de **4000** em diante, que seria **IV** (com *overline* - uma linha acima do texto), 
-utilize o underline antes do algarismo ao invés de overline.
+utilize o '^' chapéu depois do algarismo ao invés de overline.
