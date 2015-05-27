@@ -9,6 +9,7 @@ class ConversorDeNumerosInteirosParaRomanos(object):
     CEM = 'C'
     QUINHENTOS = 'D'
     MIL = 'M'
+    SIMBOLO_MILHAR = '^'
 
     def __init__(self):
         self.explode = ExplodeNumerosInteiros()
@@ -78,9 +79,9 @@ class ConversorDeNumerosInteirosParaRomanos(object):
             return self.MIL * milhar
         elif milhar in (4, 5):
             vezes = 5 - milhar
-            return '_' + self.UM * vezes + self.CINCO
+            return self.UM * vezes + self.CINCO + self.SIMBOLO_MILHAR
         elif milhar in (6, 7, 8):
             vezes = milhar - 5
-            return '_' + self.CINCO + self.UM * vezes
+            return self.CINCO + self.UM * vezes + self.SIMBOLO_MILHAR
         elif milhar == 9:
-            return '_' + self.UM + self.DEZ
+            return self.UM + self.DEZ + self.SIMBOLO_MILHAR
