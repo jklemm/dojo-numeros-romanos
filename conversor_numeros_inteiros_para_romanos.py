@@ -24,64 +24,30 @@ class ConversorDeNumerosInteirosParaRomanos(object):
         centena = int(self.explode.pares[0][2])
         milhar = int(self.explode.pares[1][0])
 
-        retorno = self._converte_milhar(milhar)
-        retorno += self._converte_centena(centena)
-        retorno += self._converte_dezena(dezena)
-        retorno += self._converte_unidade(unidade)
+        retorno = self._converte_milhares(milhar, self.MIL)
+        retorno += self._converte_tres_numeros(centena, self.CEM, self.QUINHENTOS, self.MIL)
+        retorno += self._converte_tres_numeros(dezena, self.DEZ, self.CINQUENTA, self.CEM)
+        retorno += self._converte_tres_numeros(unidade, self.UM, self.CINCO, self.DEZ)
         return retorno
 
-    def _converte_unidade(self, unidade):
-        if unidade == 0:
+    def _converte_tres_numeros(self, valor, menor, meio, maior):
+        if valor == 0:
             return ''
-        elif unidade in (1, 2, 3):
-            return self.UM * unidade
-        elif unidade in (4, 5):
-            vezes = 5 - unidade
-            return self.UM * vezes + self.CINCO
-        elif unidade in (6, 7, 8):
-            vezes = unidade - 5
-            return self.CINCO + self.UM * vezes
-        elif unidade == 9:
-            return self.UM + self.DEZ
+        elif valor in (1, 2, 3):
+            return menor * valor
+        elif valor in (4, 5):
+            vezes = 5 - valor
+            return menor * vezes + meio
+        elif valor in (6, 7, 8):
+            vezes = valor - 5
+            return meio + menor * vezes
+        elif valor == 9:
+            return menor + maior
 
-    def _converte_dezena(self, dezena):
-        if dezena == 0:
+    def _converte_milhares(self, valor, menor):
+        if valor == 0:
             return ''
-        elif dezena in (1, 2, 3):
-            return self.DEZ * dezena
-        elif dezena in (4, 5):
-            vezes = 5 - dezena
-            return self.DEZ * vezes + self.CINQUENTA
-        elif dezena in (6, 7, 8):
-            vezes = dezena - 5
-            return self.CINQUENTA + self.DEZ * vezes
-        elif dezena == 9:
-            return self.DEZ + self.CEM
-
-    def _converte_centena(self, centena):
-        if centena == 0:
-            return ''
-        elif centena in (1, 2, 3):
-            return self.CEM * centena
-        elif centena in (4, 5):
-            vezes = 5 - centena
-            return self.CEM * vezes + self.QUINHENTOS
-        elif centena in (6, 7, 8):
-            vezes = centena - 5
-            return self.QUINHENTOS + self.CEM * vezes
-        elif centena == 9:
-            return self.CEM + self.MIL
-
-    def _converte_milhar(self, milhar):
-        if milhar == 0:
-            return ''
-        elif milhar in (1, 2, 3):
-            return self.MIL * milhar
-        elif milhar in (4, 5):
-            vezes = 5 - milhar
-            return self.UM * vezes + self.CINCO + self.SIMBOLO_MILHAR
-        elif milhar in (6, 7, 8):
-            vezes = milhar - 5
-            return self.CINCO + self.UM * vezes + self.SIMBOLO_MILHAR
-        elif milhar == 9:
-            return self.UM + self.DEZ + self.SIMBOLO_MILHAR
+        elif valor in (1, 2, 3):
+            return menor * valor
+        else:
+            return self._converte_tres_numeros(valor, self.UM, self.CINCO, self.DEZ) + self.SIMBOLO_MILHAR
