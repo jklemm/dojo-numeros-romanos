@@ -35,15 +35,15 @@ CCC = 300
 MMM = 3000
 ```
 
-Do milhar 4000 em diante, os algarismos são os mesmos de unidade (IV, V, VI, VII, VIII, IX, X), porém com acento circunflexo após o algarismo:
+Do milhar 4000 em diante, os algarismos são os mesmos de unidade (IV, V, VI, VII, VIII, IX, X), porém com um traço (macron) sobre o algarismo:
 ```
-IV^ = 4000
-V^ = 5000
-VI^ = 6000
-VII^ = 7000
-VIII^ = 8000
-IX^ = 9000
-X^ = 10000
+ĪV̄ = 4000
+V̄ = 5000
+V̄Ī = 6000
+V̄ĪĪ = 7000
+V̄ĪĪĪ = 8000
+ĪX̄ = 9000
+X̄ = 10000
 ```
 
 Quando escritos à direita de numerais maiores, I, X e C somam-se aos valores dos primeiros:
