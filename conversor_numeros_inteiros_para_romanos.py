@@ -9,7 +9,9 @@ class ConversorDeNumerosInteirosParaRomanos(object):
     CEM = 'C'
     QUINHENTOS = 'D'
     MIL = 'M'
-    SIMBOLO_MILHAR = '^'
+    UM_MIL = 'Ī'
+    CINCO_MIL = 'V̄'
+    DEZ_MIL = 'X̄'
 
     def __init__(self):
         self.explode = ExplodeNumerosInteiros()
@@ -50,4 +52,4 @@ class ConversorDeNumerosInteirosParaRomanos(object):
         elif valor in (1, 2, 3):
             return menor * valor
         else:
-            return self._converte_tres_numeros(valor, self.UM, self.CINCO, self.DEZ) + self.SIMBOLO_MILHAR
+            return self._converte_tres_numeros(valor, self.UM_MIL, self.CINCO_MIL, self.DEZ_MIL)
